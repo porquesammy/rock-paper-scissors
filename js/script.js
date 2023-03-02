@@ -1,6 +1,7 @@
 "use strict";
 
 let computerSelection;
+let result;
 
 function getComputerChoice() {
     computerSelection = Math.floor(Math.random() * 3) + 1;
@@ -15,7 +16,7 @@ function getComputerChoice() {
             computerSelection = 'scissors';
             break;
         default:
-            console.warn("Something went horribly wrong!!!")
+            console.warn("Something went horribly wrong!!!");
     }
 }
 
@@ -30,9 +31,6 @@ function getPlayerChoice() {
         getPlayerChoice();
     }
 }
-
-
-let result;
 
 function checkResult() {
 
@@ -72,6 +70,17 @@ function checkResult() {
     }
 }
 
+//css console styling 
+function consoleStyling(msg) {
+    let color;
+    if (result === 'tie') {
+        color = 'yellow';
+    } else if (result === 'lose' || result === 'lost') {
+        color = 'red';
+    } else { color = 'green' };
+
+    return console.log('%c' + msg, 'color:' + color + '; font-weight: 900; padding: .5rem; border: 3px solid ' + color + ';');
+}
 
 //game structure calling functions and updating score
 function startGame() {
@@ -88,14 +97,20 @@ function startGame() {
         } else if (result === 'lose') {
             ++computerScore;
         }
+
         console.log(`You chose ${playerSelection}`);
         console.log(`The computer chose ${computerSelection}`);
-        console.log(`You ${result}!`);
+        consoleStyling(`You ${result}!`);
         console.log(`Current Score: 
         You: ${playerScore} Computer: ${computerScore} 
         `);
     }
-    console.log('GAME OVER!');
+    if (result === 'lose') {
+        result = 'lost'
+    } else {
+        result = 'WON';
+    }
+    consoleStyling(`GAME OVER! You ${result}!`);
 }
 
 console.log('Type "startGame()" to begin');
