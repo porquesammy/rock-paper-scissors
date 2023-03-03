@@ -24,7 +24,7 @@ let playerSelection
 
 function getPlayerChoice() {
     playerSelection = prompt('Please Choose: Rock, Paper, or Scissors');
-    playerSelection = playerSelection.toLowerCase();
+    playerSelection = playerSelection.toLowerCase().trim();
     if (playerSelection === 'rock' || playerSelection === 'paper' || playerSelection === 'scissors') {
         return playerSelection;
     } else {
@@ -33,10 +33,9 @@ function getPlayerChoice() {
 }
 
 function checkResult() {
+    switch (playerSelection) {
 
-    switch (true) {
-
-        case (playerSelection === 'rock'):
+        case ('rock'):
             if (computerSelection === 'rock') {
                 result = 'tie';
             } else if (computerSelection === 'paper') {
@@ -46,7 +45,7 @@ function checkResult() {
             }
             break;
 
-        case (playerSelection === 'paper'):
+        case ('paper'):
             if (computerSelection === 'paper') {
                 result = 'tie';
             } else if (computerSelection === 'scissors') {
@@ -56,7 +55,7 @@ function checkResult() {
             }
             break;
 
-        case (playerSelection === 'scissors'):
+        case ('scissors'):
             if (computerSelection === 'scissors') {
                 result = 'tie';
             } else if (computerSelection === 'rock') {
