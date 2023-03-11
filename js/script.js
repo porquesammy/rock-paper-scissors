@@ -124,16 +124,24 @@ function checkResult() {
 
 function game() {
     readyText.style.display = 'none';
+    playerText.style.display = 'block';
+    computerText.style.display = 'block';
+    const playerTextSpan = document.querySelector('.player-choice>span');
+    const computerTextSpan = document.querySelector('.robot-choice>span');
+
   if (playerScore < 3 && computerScore < 3) {
     getComputerChoice();
     checkResult();
+    playerTextSpan.innerText = `${playerSelection}`;
+    computerTextSpan.innerText = `${computerSelection}`;
 
     if (result === 'win') {
       ++playerScore;
-      console.log(playerScore);
+
+      
     } else if (result === 'lose') {
       ++computerScore;
-      console.log(computerScore);
+
     } else {
       result = 'tie';
     }
@@ -152,7 +160,6 @@ function game() {
     case 3:
       playerScoreThree.classList.add('win');
       ++totalGamesWon;
-      console.log('you win');
       playerScore = undefined;
       computerScore = undefined;
       choose.innerText = 'New Game?';
