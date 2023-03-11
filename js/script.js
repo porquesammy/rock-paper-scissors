@@ -37,13 +37,6 @@ document.getElementById('scissors').onclick = function () {
   game();
 };
 
-
-// playerText.classList.add('playerText');
-// computerText.classList.add('computerText');
-// const feedback = document.querySelector('.feedback');
-// playerText.innerText = `You chose ${playerSelection}`;
-// feedback.appendChild(playerText);
-
 function reset() {
   playerScore = 0;
   computerScore = 0;
