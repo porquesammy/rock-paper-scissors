@@ -41,6 +41,9 @@ function reset() {
   playerScore = 0;
   computerScore = 0;
   clearAllLights();
+  if (document.getElementById('reset')){
+    document.getElementById('reset').removeEventListener('click', reset, false);
+};
   choose.removeAttribute('id');
   choose.innerText = 'Choose one!';
   playerText.style.display = 'none';

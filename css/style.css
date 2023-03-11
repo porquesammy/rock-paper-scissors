@@ -92,8 +92,8 @@ h2 {
   color: rgb(249, 191, 90);
 }
 
-.choose:hover {
-  color:#009688;
+.new-game:hover {
+  cursor: pointer;
 }
 .robot-choice{
   display: none;
@@ -237,30 +237,5 @@ button {
   100% {
     transform: rotate(0deg);
   }
-}
-
-styles and colors delete later {
-  /* dark primary */
-  --dark-primary: #512da8;
-  /* primary color */
-  --primary: #673ab7;
-  /* light primary */
-  --light-primary: #d1c4e9;
-  /* accent color */
-  --accent: #009688;
-  /* primary text */
-  --primary-text: #212121;
-  /* light text and icons */
-  --light: #f2f0eb;
-  /* secondary text  */
-  --secondary-text: #757575;
-  /* success green  */
-  --success: #4caf50;
-  /* fail red */
-  --fail: #f44336;
-
-  font-family: "Bungee Shade", cursive;
-  font-family: "Nunito Sans", sans-serif;
-  font-family: "Open Sans", sans-serif;
 }
 
