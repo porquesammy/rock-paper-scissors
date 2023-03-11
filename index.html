@@ -1,14 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock, Paper, Scissors</title>
-</head>
-<body>
-    <h1>Rock, Paper, Scissors</h1>
-    <p>Open up your console to play </p> <p>PC: Ctrl + Shift + J<br> Mac: Cmd + Option + J</p>
-</body>
-<script src="js/script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Nunito+Sans:ital,wght@0,200;0,400;0,800;1,200;1,400;1,800&family=Open+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+
+  <body>
+    <div class="main-container">
+      <header>
+        <h1>Rock, Paper, Scissors</h1>
+      </header>
+      <div class="content-container">
+        <h2 class="choose">Choose One!</h2>
+        <div class="card-container">
+          <div class="card" id="rock">
+            <div class="rock">
+              <img src="./imgs/rock-icon.svg" alt="Rock icon" />
+            </div>
+            <p>Rock</p>
+          </div>
+
+          <div class="card" id="paper">
+            <div class="paper">
+              <img src="./imgs/paper-icon.svg" alt="Paper icon" />
+            </div>
+            <p>Paper</p>
+          </div>
+
+          <div class="card" id="scissors">
+            <div class="scissors">
+              <img src="./imgs/scissors.svg" alt="Scissors icon" />
+            </div>
+            <p>Scissors</p>
+          </div>
+        </div>
+
+        <div class="player-container">
+          <div class="score-container player">
+            <button type="button" class="score plyr playerScoreOne-btn"></button>
+            <button type="button" class="score plyr playerScoreTwo-btn"></button>
+            <button type="button" class="score plyr playerScoreThree-btn"></button>
+          </div>
+        </div>
+        <div class="feedback">
+          <p class="ready"><em>Ready!?</em></p>
+
+          <p class="player-choice">You Chose: <span></span></p>
+          <p class="robot-choice">Robot Chose: <span></span></p>
+        </div>
+
+        <div class="computer-container">
+          <div class="score-container computer">
+            <button type="button" class="score cpu cpuScoreOne-btn"></button>
+            <button type="button" class="score cpu cpuScoreTwo-btn"></button>
+            <button type="button" class="score cpu cpuScoreThree-btn"></button>
+          </div>
+
+          <img src="/imgs/robot-picture.png" width="300px" alt="Angry Robot" />
+        </div>
+      </div>
+      <footer>Created By Craig Cardoni</footer>
+    </div>
+  </body>
+
+  <script src="js/script.js"></script>
 </html>
