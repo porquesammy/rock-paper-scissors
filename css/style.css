@@ -95,10 +95,10 @@ h2 {
 .new-game:hover {
   cursor: pointer;
 }
-.robot-choice{
+.robot-choice {
   display: none;
 }
-.player-choice{
+.player-choice {
   display: none;
 }
 
@@ -238,4 +238,3 @@ button {
     transform: rotate(0deg);
   }
 }
-
